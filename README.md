@@ -9,6 +9,10 @@ Page under development ... (
 
 Playing with react + styled components
 
+Preview
+
+[![preview](showcase.jpg)](showcase.jpg)
+
 <hr >
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
