@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const Header = styled.h1`
+  position: relative;
   font-size: 82px;
   letter-spacing: 4px;
   text-align: center;

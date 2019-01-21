@@ -1,16 +1,16 @@
 import React from 'react';
 import styled, {keyframes, css} from 'styled-components';
 
-import homeBg from '../assets/homeBg.jpg';
-import homeBg1 from '../assets/homeBg1.jpg';
-import homeBg2 from '../assets/homeBg2.jpg';
-import homeBg3 from '../assets/homeBg3.jpg';
+import homeBg from '../../assets/homeBg.jpg';
+import homeBg1 from '../../assets/homeBg1.jpg';
+import homeBg2 from '../../assets/homeBg2.jpg';
+import homeBg3 from '../../assets/homeBg3.jpg';
 import Header from './Header';
 
 const backgrounds = [homeBg, homeBg1, homeBg2, homeBg3];
 const backgroundColors = ['#cc2b23', '#1c5238', '#95724c', '#7b6379'];
 
-const slide = props => {
+const colorSlide = props => {
   const color = backgroundColors[props.index];
   return keyframes`
   40% {
@@ -32,29 +32,30 @@ const slide = props => {
 `;
 };
 
-const fadeInHeader = opacity => {
+const slideInOut = (prev, opacity) => {
   return keyframes`
   0% {
+    opacity: ${opacity};
+  }
+  5% {
+    opacity: .3;
+  }
+  10% {
+    margin-left: ${prev ? '-50px;' : '50px;'};
     opacity: 0;
   }
+  50% {
+    opacity: 0;
+    margin-left: ${prev ? '50px;' : '-50px;'};
+  }
   100% {
+    margin-left: 0;
     opacity: ${opacity};
   }
 `;
 };
 
-const sildeInOut = prev => {
-  return keyframes`
-  0% {
-    margin-left: ${prev ? '100px;' : '-100px;'};
-  }
-  100% {
-    margin-left: 0;
-  }
-`;
-};
-
-const HomeWrapper = styled.div`
+const HomeContainer = styled.div`
   position: absolute;
   left: 0;
   display: flex;
@@ -73,13 +74,13 @@ const HomeWrapper = styled.div`
   overflow: hidden;
   ${props =>
     props.isMenuOpen &&
-    `
-    transform: translateX(50vw);
+    css`
+      transform: translateX(50vw);
 
-    @media screen and (max-width: 800px) {
-      transform: translateX(80vw);
-    }
-  `}
+      @media screen and (max-width: 800px) {
+        transform: translateX(80vw);
+      }
+    `}
 
   &::before {
     content: '';
@@ -89,7 +90,7 @@ const HomeWrapper = styled.div`
     left: 0;
     height: 100vh;
     width: 0px;
-    animation: ${slide} 1900ms ease-in-out 100ms
+    animation: ${colorSlide} 1900ms ease-in-out 100ms
       ${props => props.prev && 'alternate-reverse'};
   }
 
@@ -99,29 +100,31 @@ const HomeWrapper = styled.div`
     top: 41%;
     transform: translate(-50%, -50%);
     left: 30px;
-    opacity: 0;
-    animation: ${fadeInHeader(0.3)} 500ms 1500ms forwards,
-      ${props =>
-        css`
-          ${sildeInOut(props.prev)} 300ms;
-        `};
+    opacity: 0.3;
+    ${props =>
+      props.transitioning &&
+      css`
+        animation: ${slideInOut(props.prev, 0.3)} 3000ms;
+      `}
 
     :nth-child(2) {
+      opacity: 0.3;
       left: calc(100% + 50px);
-      animation: ${fadeInHeader(0.3)} 400ms 1500ms forwards,
-        ${props =>
-          css`
-            ${sildeInOut(props.prev)} 3000ms;
-          `};
+      ${props =>
+        props.transitioning &&
+        css`
+          animation: ${slideInOut(props.prev, 0.3)} 3000ms;
+        `};
     }
 
     :nth-child(3) {
+      opacity: 1;
       left: 50%;
-      animation: ${fadeInHeader(1)} 400ms 1500ms forwards,
-        ${props =>
-          css`
-            ${sildeInOut(props.prev)} 3000ms;
-          `};
+      ${props =>
+        props.transitioning &&
+        css`
+          animation: ${slideInOut(props.prev, 1)} 3000ms;
+        `};
     }
   }
 
@@ -130,4 +133,4 @@ const HomeWrapper = styled.div`
   }
 `;
 
-export default props => <HomeWrapper { ...props } />;
+export default props => <HomeContainer { ...props } />;

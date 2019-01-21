@@ -3,7 +3,7 @@ import logo from '../assets/logo.png';
 import logoGray from '../assets/logoGray.png';
 import logoColored from '../assets/logoColored.png';
 
-export default props => {
+const Logo = props => {
   const variant = () => {
     if (props.colored) {
       return logoColored;
@@ -14,5 +14,7 @@ export default props => {
     return logo;
   };
 
-  return <img src={ variant() } alt='logo' { ...props } />;
+  return <img src={ variant() } alt='logo' />;
 };
+
+export default Logo

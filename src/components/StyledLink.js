@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import styled from 'styled-components';
+import {Link} from 'react-router-dom';
 
 const StyledLink = styled(Link)`
   color: inherit;
@@ -15,7 +15,8 @@ const StyledLink = styled(Link)`
     bottom: -2px;
     height: 1px;
     width: 0px;
-    background-color: ${props => props.underlineColor};
+    background-color: ${({underlineColor}) =>
+      underlineColor ? underlineColor : '#ffffff'};
     transition: all 300ms;
   }
 
@@ -25,9 +26,6 @@ const StyledLink = styled(Link)`
       width: 100%;
     }
   }
-`
-StyledLink.defaultProps = {
-  underlineColor: '#ffffff'
-}
+`;
 
-export default StyledLink
+export default StyledLink;
