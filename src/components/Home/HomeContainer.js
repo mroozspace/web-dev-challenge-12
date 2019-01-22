@@ -101,6 +101,7 @@ const HomeContainer = styled.div`
     transform: translate(-50%, -50%);
     left: 30px;
     opacity: 0.3;
+    
     ${props =>
       props.transitioning &&
       css`

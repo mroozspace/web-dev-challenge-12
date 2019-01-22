@@ -5,7 +5,7 @@ const MenuBg = styled.img`
   max-height: 400px;
   margin-bottom: 70px;
   @media screen and (max-width: 1200px) {
-    max-height: 50vh;
+    max-height: 40vh;
     margin-bottom: 8vh;
   }
 `;

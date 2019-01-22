@@ -20,7 +20,7 @@ export default class Home extends Component {
       sliderIndex: 0,
       isMenuOpen: false,
       prev: false,
-      transitioning: true,
+      transitioning: false,
       headers: ['Tender', 'Zephirest', 'Evangelist', 'Superstition']
     };
     this.timeouts = [];
@@ -38,7 +38,6 @@ export default class Home extends Component {
   componentWillUnmount = () => {
     clearInterval(this.sliderInterval);
     this.timeouts.forEach(timeout => clearTimeout(timeout));
-    // check solution
   };
 
   toggleMenu = () => this.setState({isMenuOpen: !this.state.isMenuOpen});
