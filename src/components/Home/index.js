@@ -19,8 +19,8 @@ export default class Home extends Component {
     this.state = {
       sliderIndex: 0,
       isMenuOpen: false,
-      prev: false,
       transitioning: false,
+      direction: 'next',
       headers: ['Tender', 'Zephirest', 'Evangelist', 'Superstition']
     };
     this.timeouts = [];
@@ -28,7 +28,7 @@ export default class Home extends Component {
 
   componentDidMount = () => {
     this.sliderInterval = setInterval(() => {
-      this.handleSlideChange('next');
+      this.handleSlideChange();
     }, 6000);
     this.timeouts[0] = setTimeout(() => {
       this.setState({transitioning: false});
@@ -42,16 +42,15 @@ export default class Home extends Component {
 
   toggleMenu = () => this.setState({isMenuOpen: !this.state.isMenuOpen});
 
-  handleSlideChange = dir => {
+  handleSlideChange = () => {
     let {sliderIndex, headers} = this.state;
-    let nextIndex, prev, newHeaders;
-    if (dir === 'next') {
+    let nextIndex, newHeaders;
+
+    if (this.state.direction === 'next') {
       nextIndex = ++sliderIndex % 4;
-      prev = false;
       newHeaders = [].concat(headers.slice(1, headers.length), headers[0]);
     } else {
       sliderIndex === 0 ? (nextIndex = 3) : (nextIndex = --sliderIndex % 4);
-      prev = true;
       newHeaders = [].concat(
         headers[headers.length - 1],
         headers.slice(0, headers.length - 1)
@@ -59,7 +58,6 @@ export default class Home extends Component {
     }
     this.setState({
       sliderIndex: nextIndex,
-      prev,
       transitioning: true
     });
     this.timeouts[1] = setTimeout(() => {
@@ -74,6 +72,18 @@ export default class Home extends Component {
     }, 3000);
   };
 
+  handleManualSlideChange = direction => {
+    if (this.state.transitioning) {
+      return;
+    }
+    clearInterval(this.sliderInterval);
+    this.handleSlideChange();
+    this.sliderInterval = setInterval(() => {
+      this.handleSlideChange();
+    }, 6000);
+    this.setState({direction});
+  };
+
   render() {
     const {isMenuOpen, headers} = this.state;
 
@@ -84,7 +94,7 @@ export default class Home extends Component {
           transitioning={ this.state.transitioning }
           bg={ homeBg }
           index={ this.state.sliderIndex }
-          prev={ this.state.prev }
+          direction={ this.state.direction }
           isMenuOpen={ this.state.isMenuOpen }
         >
           <Flex justifyContent={ 'space-between' } alignItems={ 'flex-start' }>
@@ -115,8 +125,13 @@ export default class Home extends Component {
             flex={ '1 0' }
           >
             <CarouselNavContainer>
-              <Btn onClick={ () => this.handleSlideChange() }>Preview</Btn>/
-              <Btn onClick={ () => this.handleSlideChange('next') }>Next</Btn>
+              <Btn onClick={ () => this.handleManualSlideChange('prev') }>
+                Preview
+              </Btn>
+              /
+              <Btn onClick={ () => this.handleManualSlideChange('next') }>
+                Next
+              </Btn>
             </CarouselNavContainer>
             <Footer>
               <p>

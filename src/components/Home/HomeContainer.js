@@ -32,7 +32,7 @@ const colorSlide = props => {
 `;
 };
 
-const slideInOut = (prev, opacity) => {
+const slideInOut = (direction, opacity) => {
   return keyframes`
   0% {
     opacity: ${opacity};
@@ -41,12 +41,12 @@ const slideInOut = (prev, opacity) => {
     opacity: .3;
   }
   10% {
-    margin-left: ${prev ? '-50px;' : '50px;'};
+    margin-left: ${direction === 'prev' ? '-50px;' : '50px;'};
     opacity: 0;
   }
   50% {
     opacity: 0;
-    margin-left: ${prev ? '50px;' : '-50px;'};
+    margin-left: ${direction === 'prev' ? '50px;' : '-50px;'};
   }
   100% {
     margin-left: 0;
@@ -91,7 +91,7 @@ const HomeContainer = styled.div`
     height: 100vh;
     width: 0px;
     animation: ${colorSlide} 1900ms ease-in-out 100ms
-      ${props => props.prev && 'alternate-reverse'};
+      ${props => props.direction === 'prev' && 'alternate-reverse'};
   }
 
   ${Header} {
@@ -105,7 +105,7 @@ const HomeContainer = styled.div`
     ${props =>
       props.transitioning &&
       css`
-        animation: ${slideInOut(props.prev, 0.3)} 3000ms;
+        animation: ${slideInOut(props.direction, 0.3)} 3000ms;
       `}
 
     :nth-child(2) {
@@ -114,7 +114,7 @@ const HomeContainer = styled.div`
       ${props =>
         props.transitioning &&
         css`
-          animation: ${slideInOut(props.prev, 0.3)} 3000ms;
+          animation: ${slideInOut(props.direction, 0.3)} 3000ms;
         `};
     }
 
@@ -124,7 +124,7 @@ const HomeContainer = styled.div`
       ${props =>
         props.transitioning &&
         css`
-          animation: ${slideInOut(props.prev, 1)} 3000ms;
+          animation: ${slideInOut(props.direction, 1)} 3000ms;
         `};
     }
   }
