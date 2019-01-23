@@ -1,7 +1,7 @@
 {
   "main.css": "/web-dev-challenge-12/static/css/main.5d2bbbfe.chunk.css",
-  "main.js": "/web-dev-challenge-12/static/js/main.158d105a.chunk.js",
-  "main.js.map": "/web-dev-challenge-12/static/js/main.158d105a.chunk.js.map",
+  "main.js": "/web-dev-challenge-12/static/js/main.628e7990.chunk.js",
+  "main.js.map": "/web-dev-challenge-12/static/js/main.628e7990.chunk.js.map",
   "static/js/1.18ba0ec0.chunk.js": "/web-dev-challenge-12/static/js/1.18ba0ec0.chunk.js",
   "static/js/1.18ba0ec0.chunk.js.map": "/web-dev-challenge-12/static/js/1.18ba0ec0.chunk.js.map",
   "runtime~main.js": "/web-dev-challenge-12/static/js/runtime~main.c64af800.js",
@@ -21,6 +21,6 @@
   "static/media/1.jpg": "/web-dev-challenge-12/static/media/1.467ae5f2.jpg",
   "static/css/main.5d2bbbfe.chunk.css.map": "/web-dev-challenge-12/static/css/main.5d2bbbfe.chunk.css.map",
   "index.html": "/web-dev-challenge-12/index.html",
-  "precache-manifest.ce86116f8edbc42fc24bd77f91079fe7.js": "/web-dev-challenge-12/precache-manifest.ce86116f8edbc42fc24bd77f91079fe7.js",
+  "precache-manifest.e8b4bf294b77cfe1f3d9daf794901e94.js": "/web-dev-challenge-12/precache-manifest.e8b4bf294b77cfe1f3d9daf794901e94.js",
   "service-worker.js": "/web-dev-challenge-12/service-worker.js"
 }

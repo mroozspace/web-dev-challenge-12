@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/web-dev-challenge-12/static/media/5.8ddbe3ae.jpg"
   },
   {
-    "revision": "158d105a70bd8b3981d4",
+    "revision": "628e79904d212be46dd2",
     "url": "/web-dev-challenge-12/static/css/main.5d2bbbfe.chunk.css"
   },
   {
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/web-dev-challenge-12/static/media/4.73f61e63.jpg"
   },
   {
-    "revision": "158d105a70bd8b3981d4",
-    "url": "/web-dev-challenge-12/static/js/main.158d105a.chunk.js"
+    "revision": "628e79904d212be46dd2",
+    "url": "/web-dev-challenge-12/static/js/main.628e7990.chunk.js"
   },
   {
     "revision": "740ef296da92292947a75188a14cde14",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/web-dev-challenge-12/static/media/7.8d568870.jpg"
   },
   {
-    "revision": "ab08e4b259ef2001a51ff024dc0646e6",
+    "revision": "2ef3737b36a84f37f67eba225c3e369a",
     "url": "/web-dev-challenge-12/index.html"
   }
 ];
