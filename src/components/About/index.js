@@ -8,21 +8,25 @@ import ContactFooter from '../ContactFooter';
 import AboutContainer from './AboutContainer';
 import imgSectionsData from './imgSectionsData';
 import Img from '../Img';
+import NavBar from '../NavBar';
+import NavBarItem from '../NavBarItem';
+import StyledLink from '../StyledLink';
 
 export default class About extends Component {
   renderSections = () =>
     imgSectionsData.map(images => {
-      return <ImgSection key={ images[0].id }>{this.renderImgsInSection(images)}</ImgSection>;
+      return (
+        <ImgSection key={ images[0].id }>
+          {this.renderImgsInSection(images)}
+        </ImgSection>
+      );
     });
 
   renderImgsInSection = images =>
     images.map(img => {
       return (
         <ImgContainer name={ img.id } key={ img.id }>
-          <Img
-            src={ img.preloadedSrc }
-            loadedSrc={ img.loadedSrc }
-            alt={ img.id } />
+          <Img src={ img.preloadedSrc } loadedSrc={ img.loadedSrc } alt={ img.id } />
           <p>{img.caption}</p>
         </ImgContainer>
       );
@@ -31,8 +35,25 @@ export default class About extends Component {
   render() {
     return (
       <AboutContainer>
-        <Flex justifyContent={ 'flex-start' }>
+        <Flex justifyContent={ 'space-between' }>
           <Logo colored />
+          <NavBar>
+            <NavBarItem>
+              <StyledLink underlineColor={ '#000' } to='/works'>
+                Works
+              </StyledLink>
+            </NavBarItem>
+            <NavBarItem>
+              <StyledLink underlineColor={ '#000' } to='/about'>
+                About
+              </StyledLink>
+            </NavBarItem>
+            <NavBarItem>
+              <StyledLink underlineColor={ '#000' } to='/'>
+                Home
+              </StyledLink>
+            </NavBarItem>
+          </NavBar>
         </Flex>
         <ImgSectionsContainer>
           <p>

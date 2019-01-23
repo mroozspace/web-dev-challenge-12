@@ -3,6 +3,7 @@ import styled from 'styled-components';
 const NavBar = styled.nav`
   display: flex;
   justify-content: flex-end;
+  align-self: flex-start;
   align-items: center;
   float: right;
   margin: 0;

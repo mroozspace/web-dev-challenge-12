@@ -26,6 +26,7 @@ const StyledLink = styled(Link)`
       width: 100%;
     }
   }
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 `;
 
 export default StyledLink;

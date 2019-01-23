@@ -6,12 +6,31 @@ import StyledLink from '../StyledLink';
 import Slider from './Slider';
 import ContactFooter from '../ContactFooter';
 import SideNav from './SideNav';
+import NavBar from '../NavBar';
+import NavBarItem from '../NavBarItem';
 
 export default function About() {
   return (
     <WorksContainer>
-      <Flex justifyContent={ 'flex-start' } flexBasis={ '80px' }>
+      <Flex justifyContent={ 'space-between' } flexBasis={ '80px' }>
         <Logo colored />
+        <NavBar>
+            <NavBarItem>
+              <StyledLink underlineColor={ '#000' } to='/works'>
+                Works
+              </StyledLink>
+            </NavBarItem>
+            <NavBarItem>
+              <StyledLink underlineColor={ '#000' } to='/about'>
+                About
+              </StyledLink>
+            </NavBarItem>
+            <NavBarItem>
+              <StyledLink underlineColor={ '#000' } to='/'>
+                Home
+              </StyledLink>
+            </NavBarItem>
+          </NavBar>
       </Flex>
       <Flex justifyContent={ 'flex-start' }>
         <SideNav>

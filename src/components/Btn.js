@@ -11,6 +11,7 @@ const Btn = styled.a`
   &:active {
     opacity: 0.8;
   }
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 `;
 
 export default Btn;

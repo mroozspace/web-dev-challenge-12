@@ -15,7 +15,7 @@ ${SideNav} h2 {
   margin-bottom: 52px;
 }
 
-${StyledLink} {
+${SideNav} ${StyledLink} {
   text-transform: uppercase;
   margin-bottom: 20px;
 }

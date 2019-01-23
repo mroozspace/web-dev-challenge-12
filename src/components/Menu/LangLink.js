@@ -18,6 +18,7 @@ const LangLink = styled(StyledLink)`
       margin-top: 10px;
     }
   }
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 `
 
 export default LangLink

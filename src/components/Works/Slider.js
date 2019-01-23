@@ -38,8 +38,16 @@ export default class Slider extends Component {
     return (
       <SliderContainer flex={ 1 }>
         <Flex flex={ 1 } justifyContent={ 'space-around' }>
-          <img src={ pics[firstPicIndex] } alt='1' />
-          <img src={ pics[secondPicIndex] } alt='2' />
+          <img
+            src={ pics[firstPicIndex] }
+            alt='1'
+            onClick={ () => this.handleSlideChange() }
+          />
+          <img
+            src={ pics[secondPicIndex] }
+            alt='2'
+            onClick={ () => this.handleSlideChange(true) }
+          />
         </Flex>
         <SliderBtnContainer>
           <Btn onClick={ () => this.handleSlideChange() }>Preview</Btn>/
