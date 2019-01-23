@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/web-dev-challenge-12/static/media/5.8ddbe3ae.jpg"
   },
   {
-    "revision": "633b44eab2eb7d06b683",
+    "revision": "158d105a70bd8b3981d4",
     "url": "/web-dev-challenge-12/static/css/main.5d2bbbfe.chunk.css"
   },
   {
-    "revision": "8426cc266eb4b9fbe9a9",
-    "url": "/web-dev-challenge-12/static/js/1.8426cc26.chunk.js"
+    "revision": "18ba0ec0f9a330e428c3",
+    "url": "/web-dev-challenge-12/static/js/1.18ba0ec0.chunk.js"
   },
   {
     "revision": "c64af80089759fee0111",
@@ -36,8 +36,8 @@ self.__precacheManifest = [
     "url": "/web-dev-challenge-12/static/media/4.73f61e63.jpg"
   },
   {
-    "revision": "633b44eab2eb7d06b683",
-    "url": "/web-dev-challenge-12/static/js/main.633b44ea.chunk.js"
+    "revision": "158d105a70bd8b3981d4",
+    "url": "/web-dev-challenge-12/static/js/main.158d105a.chunk.js"
   },
   {
     "revision": "740ef296da92292947a75188a14cde14",
@@ -68,7 +68,7 @@ self.__precacheManifest = [
     "url": "/web-dev-challenge-12/static/media/7.8d568870.jpg"
   },
   {
-    "revision": "220db9896ddced11d1309a75279781b6",
+    "revision": "ab08e4b259ef2001a51ff024dc0646e6",
     "url": "/web-dev-challenge-12/index.html"
   }
 ];

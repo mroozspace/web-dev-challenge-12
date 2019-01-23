@@ -1,9 +1,9 @@
 {
   "main.css": "/web-dev-challenge-12/static/css/main.5d2bbbfe.chunk.css",
-  "main.js": "/web-dev-challenge-12/static/js/main.633b44ea.chunk.js",
-  "main.js.map": "/web-dev-challenge-12/static/js/main.633b44ea.chunk.js.map",
-  "static/js/1.8426cc26.chunk.js": "/web-dev-challenge-12/static/js/1.8426cc26.chunk.js",
-  "static/js/1.8426cc26.chunk.js.map": "/web-dev-challenge-12/static/js/1.8426cc26.chunk.js.map",
+  "main.js": "/web-dev-challenge-12/static/js/main.158d105a.chunk.js",
+  "main.js.map": "/web-dev-challenge-12/static/js/main.158d105a.chunk.js.map",
+  "static/js/1.18ba0ec0.chunk.js": "/web-dev-challenge-12/static/js/1.18ba0ec0.chunk.js",
+  "static/js/1.18ba0ec0.chunk.js.map": "/web-dev-challenge-12/static/js/1.18ba0ec0.chunk.js.map",
   "runtime~main.js": "/web-dev-challenge-12/static/js/runtime~main.c64af800.js",
   "runtime~main.js.map": "/web-dev-challenge-12/static/js/runtime~main.c64af800.js.map",
   "static/media/7.jpg": "/web-dev-challenge-12/static/media/7.8d568870.jpg",
@@ -21,6 +21,6 @@
   "static/media/1.jpg": "/web-dev-challenge-12/static/media/1.467ae5f2.jpg",
   "static/css/main.5d2bbbfe.chunk.css.map": "/web-dev-challenge-12/static/css/main.5d2bbbfe.chunk.css.map",
   "index.html": "/web-dev-challenge-12/index.html",
-  "precache-manifest.d53472ece90c5e8256d2f2e0fb1a5196.js": "/web-dev-challenge-12/precache-manifest.d53472ece90c5e8256d2f2e0fb1a5196.js",
+  "precache-manifest.ce86116f8edbc42fc24bd77f91079fe7.js": "/web-dev-challenge-12/precache-manifest.ce86116f8edbc42fc24bd77f91079fe7.js",
   "service-worker.js": "/web-dev-challenge-12/service-worker.js"
 }
