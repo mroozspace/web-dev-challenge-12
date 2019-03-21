@@ -19,7 +19,7 @@ export default class Home extends Component {
     this.state = {
       sliderIndex: 0,
       isMenuOpen: false,
-      transitioning: false,
+      transitioning: true,
       direction: 'next',
       headers: ['Tender', 'Zephirest', 'Evangelist', 'Superstition']
     };
@@ -43,7 +43,8 @@ export default class Home extends Component {
   toggleMenu = () => this.setState({isMenuOpen: !this.state.isMenuOpen});
 
   handleSlideChange = () => {
-    let {sliderIndex, headers} = this.state;
+    let {sliderIndex} = this.state;
+    const {headers} = this.state;
     let nextIndex, newHeaders;
 
     if (this.state.direction === 'next') {

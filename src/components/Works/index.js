@@ -15,22 +15,22 @@ export default function About() {
       <Flex justifyContent={ 'space-between' } flexBasis={ '80px' }>
         <Logo colored />
         <NavBar>
-            <NavBarItem>
-              <StyledLink underlineColor={ '#000' } to='/works'>
-                Works
-              </StyledLink>
-            </NavBarItem>
-            <NavBarItem>
-              <StyledLink underlineColor={ '#000' } to='/about'>
-                About
-              </StyledLink>
-            </NavBarItem>
-            <NavBarItem>
-              <StyledLink underlineColor={ '#000' } to='/'>
-                Home
-              </StyledLink>
-            </NavBarItem>
-          </NavBar>
+          <NavBarItem>
+            <StyledLink underlineColor={ '#000' } to='/works'>
+              Works
+            </StyledLink>
+          </NavBarItem>
+          <NavBarItem>
+            <StyledLink underlineColor={ '#000' } to='/about'>
+              About
+            </StyledLink>
+          </NavBarItem>
+          <NavBarItem>
+            <StyledLink underlineColor={ '#000' } to='/'>
+              Home
+            </StyledLink>
+          </NavBarItem>
+        </NavBar>
       </Flex>
       <Flex justifyContent={ 'flex-start' }>
         <SideNav>

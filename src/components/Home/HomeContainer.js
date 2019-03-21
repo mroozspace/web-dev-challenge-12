@@ -65,6 +65,7 @@ const HomeContainer = styled.div`
   transition: background-image 500ms ease-in-out 1000ms,
     transform 300ms ease-in-out;
   background-image: ${props => `url(${backgrounds[props.index]})`};
+  background-color: ${props => backgroundColors[props.index]};
   background-position: center;
   color: #fff;
   height: 100%;

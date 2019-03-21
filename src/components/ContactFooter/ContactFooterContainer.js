@@ -21,11 +21,6 @@ ${Footer} {
   }
   ${Flex} {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  ${Flex} {
     ${Flex}:nth-child(2) {
       flex-direction: column;
       align-items: flex-start;

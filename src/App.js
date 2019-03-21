@@ -8,21 +8,17 @@ import Works from './components/Works';
 import NotFound from './components/NotFound';
 import FadeInContainer from './components/FadeIn';
 
-class App extends Component {
-  render() {
-    return (
-      <ThemeProvider theme={ theme }>
-        <Router>
-          <Switch>
-            <Route exact path='/' component={ FadeInContainer(Home) } />
-            <Route exact path='/about' component={ FadeInContainer(About) } />
-            <Route exact path='/works' component={ FadeInContainer(Works) } />
-            <Route component={ NotFound } />
-          </Switch>
-        </Router>
-      </ThemeProvider>
-    );
-  }
-}
+const App = () => (
+  <ThemeProvider theme={ theme }>
+    <Router>
+      <Switch>
+        <Route exact path="/" component={ FadeInContainer(Home) } />
+        <Route exact path="/about" component={ FadeInContainer(About) } />
+        <Route exact path="/works" component={ FadeInContainer(Works) } />
+        <Route component={ NotFound } />
+      </Switch>
+    </Router>
+  </ThemeProvider>
+);
 
 export default App;
